@@ -1,0 +1,718 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(90deg,rgba(235, 171, 193, 0.632) ,rgb(54, 226, 183));
+}
+.container{
+    padding: 0 35px;
+    height: auto;
+    flex-wrap: nowrap;
+} 
+.page-header {
+    position: fixed;
+    justify-content: space-evenly;
+    z-index:1;
+    
+}
+.logo {
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-top: 20%;
+    
+}
+.logo a {
+    
+    color: #000000be;
+    text-decoration: none;
+    font-weight: 1000;
+    flex-wrap: nowrap;
+}
+.dropbtn{
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(242, 234, 235);
+    cursor: pointer;
+    
+}
+
+.icon{
+    position: fixed;
+    right: 50px;
+    top: 45px;
+    
+}
+.dropdown-content{
+    display: none;
+    position: relative;
+    background-color: rgb(104, 98, 98);
+    min-width: 130px;
+    box-shadow: 8px 5px 0px 0px;
+    z-index: 1;
+    
+}
+.dropdown-content a{
+    color: black;
+    padding: 13px 2px ;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li{
+    list-style-type: none;  
+}
+
+.dropdown-content a:hover{
+    background-color: #244D61;
+    color: bisque;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.dropbtn:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    color: rgba(207, 162, 103, 0.388);
+    background-color: rgb(159, 77, 77);
+    border-radius: 15px;
+    right: 15px;
+}
+
+/* 1 */
+.heading{
+    display: flex;
+    position: absolute;
+    padding: 12%;
+    
+}
+.heading h3{
+    font-size: 35px;
+    font-family: Comic Sans MS;
+    color: rgb(31, 47, 31);
+}
+.image{
+    display: flex;
+    position:absolute;
+    justify-content: center;
+}
+
+.role h1{
+    padding: 20% 20% 0px 0px;
+    text-align: center;
+    justify-content: center;
+    font-size: 80px;
+    min-width: auto;
+    font-family: Bookman Old Style;
+    
+}
+.roles h1{
+    padding: 20px 0% 0% 10%;
+    font-family: Bookman Old Style;
+    text-align: center;
+    font-size: 100px;
+    
+}
+.image img{
+    border: 2px solid;
+    border-radius: 55%;
+    border-color: rgba(76, 71, 65, 0.562);
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+}
+.image {
+   top: 35%;
+  right: 27%;
+}
+.para{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 150px;
+    padding-bottom: 30px;
+}
+.para .line1 p{
+    margin-left: 50px;
+    
+}
+/* SECTION 2 */
+.cards{
+    background: linear-gradient(150deg,rgb(54, 226, 183) ,rgba(3, 196, 249, 0.781));
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.edu h1{
+    display: flex;
+    position: absolute;
+    margin-left: 25%;
+    justify-content: center;
+    margin-top: -300px;
+    color: #163337;
+    font-weight: 1000;
+    font-size: 50px;
+    font-family: Wide Latin;
+    letter-spacing: 2px;
+}
+.cards .front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .1s;
+}
+.cards .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #bbd1d4;
+}
+
+.card1{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.card1 .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 10px 20px rgb(12, 3, 3);
+}
+.card1 .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card1 .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: aquamarine;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card1 .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    border-radius: 10px;
+    padding: 15px;
+    color: #b7af8d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+
+}
+.card1 .back h3{
+    background-color: rgb(230, 205, 18);
+    color: #000000;
+    font-family: Lucida Calligraphy;
+    font-weight: 1000;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 0px;
+    letter-spacing: 2px;
+}
+.card1 .back p{
+    margin-top: 5px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: Lucida Calligraphy;
+}
+.card1:hover .front{
+    transform: perspective(600px) rotateY(360deg);
+}
+.card1:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/* CARD2 */
+.card2{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.card2 .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 10px 20px rgb(12, 3, 3);
+    /* box-shadow: 0 5px 10px rgb(255, 255, 255); */
+}
+
+.card2 .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card2 .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: aquamarine;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card2 .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    padding: 15px;
+    color: #b7af8d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+
+}
+.card2 .back h3{
+    background-color: rgb(230, 205, 18);
+    color: #000000;
+    font-family: Lucida Calligraphy;
+    font-weight: 1000;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 0px;
+    letter-spacing: 2px;
+}
+.card2 .back p{
+    margin-top: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: Lucida Calligraphy;
+}
+.card2:hover .front{
+    transform: perspective(600px) rotateY(360deg);
+}
+.card2:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* CARD 3 */
+.card3{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+.card3 .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 10px 20px rgb(12, 3, 3);
+}
+.card3 .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card3 .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: aquamarine;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card3 .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    padding: 15px;
+    color: #b7af8d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+
+}
+.card3 .back h3{
+    background-color: rgb(230, 205, 18);
+    color: #000000;
+    font-family: Lucida Calligraphy;
+    font-weight: 1000;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 0px;
+    letter-spacing: 2px;
+}
+.card3 .back p{
+    margin-top: 10px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-family: Lucida Calligraphy;
+    overflow: visible;
+}
+.card3:hover .front{
+    transform: perspective(600px) rotateY(360deg);
+}
+.card3:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+  
+ /* section 3 */
+ .experience{
+    background: linear-gradient(75deg,#52c571b1,#7b711abe);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px 25px;
+    padding: 100px 50px;
+    height: auto;
+    flex-wrap: wrap;
+ }
+ .head h1{
+    font-family: Wide Latin;
+    font-weight: 1000;
+    font-size: 50px;
+   
+ }
+ .box{
+    position: relative;
+    left: 40px;
+    top: 60px;
+ }
+ .box img{
+    border-radius: 20px;    
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 5px 10px #4d0000;
+    
+ }
+ .box1{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+    
+ }
+ .box1 ul{
+    position: relative;
+    list-style: none;
+    line-break: 2px;
+    bottom: 200px;
+    left: 50px;
+ }
+.box1 li{
+    font-family: Stencil;
+    font-size: 20px;
+    letter-spacing: 2px;
+ }
+.box  .box1 a{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    right: 180px;
+    bottom: 120px;
+    color: #000;
+    font-weight: 80%;
+    
+ }
+    
+
+/* section 4 */
+.skills{
+    background: linear-gradient(45deg,#00bcd4,#ffeb3b);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px 25px;
+    padding: 100px 50px;
+    height: auto;
+}
+.skills h1{
+    display: flex;
+    position: absolute;
+    left: 40%;
+    color: #163337;
+    font-weight: 1000;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-top: -50px;
+}
+.skills .cardd{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 300px;
+    background: rgb(53, 191, 127);
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 30px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+.skills .cardd:hover{
+    height: 400px;
+}
+.skills .cardd .image{
+    position: absolute;
+    top: 20px; 
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgb(35, 218, 208), rgba(255, 255, 0, 0.573));
+    border-radius: 30px;
+    transition: 0.7s;
+    overflow: hidden;
+}
+.skills .cardd:hover .image{
+    top: -100px;
+    scale: 0.50;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2); 
+}
+.skills .cardd .image img{
+    position: absolute;
+    bottom: 0px;
+    right: 3px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.skills .cardd .content{
+    position: absolute;
+    top: 255px;
+    width: 100%;
+    padding: 0 30px;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.skills .cardd:hover .content{
+    top: 150px;
+    height: 230px;
+    overflow: visible;
+}
+.skills .cardd .content h2{
+    color: #0e7da9;
+    font-weight: 800px;
+    font-family: cursive;
+}
+.skills .cardd .content ul{
+    margin-top: 20px;
+    
+}
+.skills .cardd .content li{
+    font-size: 19px;
+    font-family: Arial Rounded MT Bold;
+    
+
+}
+
+/* PROJECT */
+
+.project{
+    background: linear-gradient(35deg,rgb(73, 73, 227),rgb(233, 71, 71));
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}
+.project h1{
+    position: absolute;
+    top: 90px;
+    font-size: 50px;
+    color: rgb(51, 56, 38);
+    font-family: "Wide Latin";
+}
+.project .cardss{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    transform-style: rotate;
+}
+.cardss:hover   {
+    position: absolute;
+    transform: rotateY(90deg);
+    transition-duration: 5s;
+    visibility: hidden;
+     
+}
+.project .cardss img{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    float: left;
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(3,32,51, .8);
+}
+
+.cardss .content h2{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* section 5 */
+.footer{
+    background: linear-gradient(35deg, rgb(255, 255, 0) ,rgb(0, 128, 0));
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.hello{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5%;
+}
+.footer a{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.footer button{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    /* margin-left: 35%; */ 
+    font-family: Cascadia Code SemiBold;
+    letter-spacing: 1px;
+    color: #510000;
+    font-size: 25px;
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    background: linear-gradient(30deg,rgba(27, 206, 206, 0.637),yellow);
+    box-shadow: 3px 5px 7px rgba(5, 79, 34, 0.564);
+}
+
+.footer .wrapper{
+    display: flex; 
+    position: relative;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.wrapper .button1 {
+    position: relative;
+    justify-content: center;
+    
+}
+.button1 img{
+    width: 40px;
+    height: 40px;
+} 
+
+
+
+.download-button {
+    background-color: #6B705C;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 85%;
+}
+
+.download-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #8FB8CA;
+}
+
+
+
+
+
+
+
+
+
+
+/* scroll */
+.scrollpage{
+   grid-row-gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: auto;
+    bottom: 25px;
+    left: 25px;
+    right: auto;
+    
+}
+.scrolltext{
+    font-family: Generalsans Variable, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    transform: rotate(-90deg);
+}
+
+.indicator{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+}
+.pagescrolldot{
+    width: 9px;
+    height: 9px;
+    background-color: #181b2e;
+    border-radius: 50%;
+    position: absolute;
+}
+.scrollline{
+    height: 40px;
+    border: 0.5px solid rgba(0, 0, 0, 0.427);
+}
+
+@media(max-width:800px){
+    body{
+        
+    }
+}
